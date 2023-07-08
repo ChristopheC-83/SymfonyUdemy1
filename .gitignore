@@ -7,14 +7,18 @@
 /public/bundles/
 /var/
 /vendor/
+.env
 ###< symfony/framework-bundle ###
-
+.env
 ###> phpunit/phpunit ###
 /phpunit.xml
 .phpunit.result.cache
+.env
 ###< phpunit/phpunit ###
-
+.env
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
+.env
 ###< symfony/phpunit-bridge ###
+.env

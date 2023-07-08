@@ -1,0 +1,35 @@
+{% extends 'base.html.twig'  %}
+
+
+{% block title  %}Page Tableaux{% endblock %}
+
+
+
+
+{% block container  %}
+
+<h1>Les Tableaux
+		</h1>
+
+		<h3>Tableau</h3>
+
+		<p>Le tableau contient
+			{{ fruits|length }}
+			fruits.</p>
+		<ul>
+			{%  for fruit in fruits  %}
+				<li>
+					{{fruit}}</li>
+			{%   endfor %}
+		</ul>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+		

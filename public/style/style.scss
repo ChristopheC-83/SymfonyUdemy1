@@ -1,0 +1,37 @@
+@import "libs/variables";
+@import "libs/reset";
+@import "libs/mixins";
+@import "libs/utilities";
+@import "communs/header_menu";
+@import "communs/footer";
+@import "pages/produits";
+
+body {
+  background-color: #f1f1f1;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  // max-width: 1440px;
+  margin: 0 auto;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodycontent {
+  flex-grow: 1;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  color: #333;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+p {
+  color: #333;
+  font-family: "Roboto Condensed", sans-serif;
+}
+ 

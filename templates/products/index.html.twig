@@ -1,0 +1,45 @@
+{% extends 'base.html.twig'  %}
+
+
+{% block title  %}Page Produits
+{% endblock %}
+
+
+{% block container  %}
+
+
+	<div class="produits">
+
+
+		<h1>Les
+			{{ products|length }}
+			Produits</h1>
+		<div class="cards-container">
+			{%for product in products %}
+				<div class="card">
+					<h3>{{product.name}}</h3>
+					<h4>Prix :
+						{{product.price}}
+						€uros / kg</h4>
+					<p>Description :
+						<br>
+						{{product.description}}</p>
+					{%  if product.overPrice %}
+						<p>Produit Noble !</p>
+					{% else %}
+						<p>Produit accessible.</p>
+					{% endif %}
+					<a href="{{ path('app_product_show', {id:product.id}) }}">Afficher le produit</a>
+
+				</div>
+				{%endfor%}
+
+			</div>
+		</div>
+		<h3>Les produits non disponibles :</h3>
+		{%for productNonDispo in productsNonDispo %}
+        <a href="{{ path('app_product_show', {id:productNonDispo.id}) }}">{{productNonDispo.name}}</a><br>
+			
+			{%endfor%}
+
+		{% endblock %}

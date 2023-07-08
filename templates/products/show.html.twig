@@ -1,0 +1,36 @@
+{% extends 'base.html.twig'  %}
+
+{% block stylesheet %}<link rel="stylesheet" href="{{'../style/style.css'}}">{% endblock %}
+
+{% block title  %}Page des {{product.name}}
+{% endblock %}
+
+
+{% block container  %}
+
+<h1>{{product.name}}</h1>
+
+
+	<div class="cards-container">
+			<div class="card">
+				<h4>Prix :
+					{{product.price}}
+					€uros / kg</h4>
+				<p>Description :
+					<br>
+					{{product.description}}</p>
+                    {%  if product.overPrice %}<p>Produit Noble !</p>
+                    {% else %} <p>Produit accessible.</p>
+                    {% endif %}
+                    {%  if product.valid %}<p>Produit disponible.</p>
+                    {% else %} <p>Produit en cours de réapprovisionnement.</p>
+                    {% endif %}
+				<a href="{{ path('app_product') }}">Retour à la liste des produits</a>
+
+			</div>
+
+		</div>
+	</div>
+
+
+{% endblock %}
